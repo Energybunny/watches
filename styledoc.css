@@ -1,0 +1,465 @@
+/* Färger
+#c4d0d9 lite blå
+#d1d9dc ljus
+#dde2e3 ljusast 
+#9d9c9a mörk 
+#72747a mörkast 
+ */
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Lato, Verdana, sans;
+}
+
+/* Uppdelning av sidan för att lättare skapa en footer. Body består av 4 delar
+Först finns en container som innehåller content, footer och navbar. Jag gjorde dettaför att det lättare skulle gå att tvinga min footer längst ner på sidan*/
+#content {
+	padding-bottom: 55px;
+}
+#container {
+	min-height: 100vh;
+	position: relative;
+	height: 100%;
+}
+#footer {
+	height: 55px;
+	background: #404040;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center; 
+	line-height: 55px;
+	color: white;
+	font-size: 1vw;
+}
+
+/* Navbar på alla sidor, vad som händer när man klickad/har musen över knapparna  */
+#navbar {
+	width: 100%;
+	height: 15vh;
+	line-height: 15vh;
+	background: #404040;
+	text-align: center;
+}
+#navbar a {
+	text-decoration: none; 
+	color: white;
+	font-size: 1.5vw;
+}
+#navbar a:visited {
+	color: white;
+}
+#navbar a:hover {
+	color: #d1d9dc;
+}
+#navbar a:active {
+	color: #9d9c9a;
+}
+
+/* Initialerna till vänster på navbar float: left och position: aboslute gör så att den ligger till vänster och resterande delar av navbar inte påverkas */
+#logo {
+	Color: white;
+	Font-size: 5em;
+	float: left;
+	margin-left: 1%;
+	position: absolute; 
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	font-family: times new roman;
+}
+/* Knapparna i mitten av min navbar (.navbtn#current visar om du är på en av sidorna som visas på navbar */
+.navbtn {
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	display: inline-block;
+	width: fixed;
+	padding-left: 1%;
+	padding-right: 1%;
+	z-index: 1;
+}
+.navbtn#current {
+	text-decoration: underline;
+}
+
+/* Dropdown på navbar, läs i script.js för att se min javascript. En vanligt dropdown visas när musen hålls över den designerade diven (dropmenu i det här fallet). Vid hover/click, visa dropmenu-content.Klicka igen och den stängs. */
+#menuicon {
+	position: absolute;
+	cursor: pointer;
+	min-width: 3vh; 
+	max-height: 2.7vh;
+	display: none;
+}
+.iconbar {
+	background: white;
+	width: 3vh;
+	height: 0.5vh;
+	margin: 0.4vh 0;
+}
+#dropmenu {
+	margin: 0;
+	padding: 6.15vh;
+	position: absolute;
+	min-width: 3vh;
+	display: inline-block;
+	right: 0;
+	height: 15vh;
+}
+.dropmenu-content {
+	display: block;
+	min-width: 22vh;
+	background: white;
+	right: 0;
+	position: absolute;
+	margin-right: 4.7vh;
+	margin-top: 3vh;
+	z-index: 1;
+	transition: height 0.3s;
+	overflow: hidden;
+	height: 0;
+	background: #f0f0f0;
+	
+}
+.dropmenu-content a {
+	color: #404040 !important;
+	font-size: 2vh !important;
+	text-align: left;
+	display: block; 
+	text-decoration: none;
+	line-height: normal;
+	padding: 1.5vh;
+}
+.dropmenu-content a:hover {
+	background: #9d9c9a;
+}
+.dropmenu-content a:visited {
+	color: #404040;
+}
+#dropmenu.extended .dropmenu-content{
+	height: 21.4vh;
+}
+
+/* Parallax och text på Home. Bakgrundsbilderna är fast och visas bara när deras del
+av hemsidan kommer upp. Text och a längre ner är till för texten och länkar på index.
+Parallax fungerar genom att bildernas position aldrig ändras. De finns alltid där
+men kan bara visas när dess designerade ruta kommer upp. Jag lägger bilden mellan 
+två textrutor och därför kan bilden bara ses när platsen mellan de två rutorna visas */
+.parallax {
+	min-height: 450px;
+	height: 42vw;
+	background-attachment: fixed; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
+	filter: alpha(opacity=80);
+	-webkit-filter: grayscale(60%);
+	filter: grayscale(60%);
+}
+.parallax#chrono {
+	background-image: url("Bilder/IWC wallpaper.jpg");
+}
+.parallax#movement {
+	background-image: url("Bilder/paneraiverk.jpg");
+}
+.parallax#guide {
+	background-image: url("Bilder/watchbrand.jpg");
+}
+.parallax#jlc {
+	background-image: url("Bilder/jlc_wallpaper.jpg");
+}
+.textruta {
+	width: 100%;
+	background: white;
+	min-height: 150px;
+	text-align: center; 
+	line-height: 150px;
+}
+.text {	
+	width: 60%;
+	font-size: 1vw;
+	line-height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -2%;
+	margin-bottom: 2%;
+	color: #404040;
+}
+a.ref {
+	color: #404040;
+}
+a:visited.ref {
+	color: #404040;
+}
+
+/* Dessa är till för att ändra storleken på titlar på index när skärmen blir mindre. Titlestor är när skärmen är liten och vice versa, kanske lite förvirrande */
+.titlestor {
+	font-size: 4vw;
+	text-decoration: none;
+	display:none;
+}
+.titlestor:visited {
+	color: black;
+}
+.titleliten {
+	font-size: 2vw;
+	text-decoration: none;
+
+}
+.titleliten:visited {
+	color: black;
+}
+
+/* Textruta på faktasidor. De som slutar på img är olika storlekar på bilder */
+#center {
+	/* Denna är till för att centrera content på sidan */
+	width: 90%;
+	margin: auto;
+}
+#textbox {
+	width: 55%;
+	padding: 3%;
+	display: inline-block;
+	font-size: 1.3vw;
+	margin-left: 3%;
+}
+#textboxintro {
+	font-size: 1.5vw;
+}
+#textbox h1 {
+	margin: 0;
+}
+.textboximg {
+	width: 100%;
+	overflow: hidden;
+	max-height: 400px;
+	object-fit: cover;
+}
+.boxsmallimg{
+	display: inline-block;
+	width: 49%;
+	margin: auto;
+	float: left;
+	margin: 0 0.5%;
+	object-fit: cover;
+	height: 12vw;
+}
+.bookmark {
+	color: black;
+	text-decoration: none;
+}
+.bookmark:visited {
+	color: black;
+}
+/* Rutan till höger på faktasidor där jag lägger bilder och länkar till andra artiklar */
+#adbox {
+	/* "lådan" som jag lägger mina ads i */
+	width: 25%;
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	margin-right: 8%;
+	margin-top: 2%;
+}
+.ad {
+	width: 94%;
+	margin-bottom: 3%;
+	display: block;
+	min-height: 13vw;	
+}
+.adimg {
+	width: 100%;
+	height: 9vw;
+	object-fit: cover;
+	padding: 0;
+}
+.adtext {
+	padding: 3%;
+	font-size: 1vw;
+}
+
+/* Detta gör så att allt passar bättre när skärmen blir mindre än 700px
+jag skriver alltså in att vissa element ändras när rutan blir en viss storlek. 
+Jag kan på så sätt se till att hemsidan ser bra ut även om det är en mindre bild */
+@media screen and (max-width: 1000px){
+	/* Länkar på höger sida av vissa webbplatser ändras */
+	#adbox, .ad  {
+		display: none;
+	}
+	#textbox {
+		width: 90%;
+		margin: 0;
+		font-size: 2.5vw;
+	}
+	#textboxintro {
+		font-size: 3vw;
+	}
+	#footer {
+		font-size: 1.6vw;
+	}
+}
+@media screen and (max-width: 700px){
+	/* Navbar ändras */
+	.navbtn {
+		display: none;
+	}
+	/* Textrutor på index ändras */
+	.textruta {
+		font-size: 4vw;
+	}
+	.text {
+		display: none;
+	}
+	.titleliten {
+		display: none;
+	}
+	.titlestor {
+		display: inline;
+	}
+	#menuicon {
+		display: inline-block;
+	}
+	#footer {
+		font-size: 2vw;
+	}
+}
+
+/* Artikelsidan. Artcenter centerar allt. Artbackimg är backgrundsbilden. 
+Main och Secondarticle är två typer av artiklar som finns. Main- och 
+secondimg är bilder som ligger i dessa artiklar. Imgtext är text som
+finns på bilderna. Jag har gjort att texten endast visas när hover är
+aktivt på artiklarna. Detta är för att minska mängden text på sidan. */
+#artcenter {
+	width: 85%;
+	margin: auto;
+	overflow: hidden;
+}
+.mainarticle {
+	width: 49%;
+	float: left;
+	text-align: center;
+	margin: 0.5% 0.5%;
+	background: white;
+	position: relative;
+}
+.secondarticle {
+	width: 32.3%;
+	float: left;
+	text-align: center;
+	margin: 0.5% 0.5%;
+	background: white;
+	position: relative;
+}
+.mainimg {
+	margin: auto; 
+	width: 100%;
+	display: block;
+	height: 21vw;
+	object-fit: cover;
+	-webkit-filter: grayscale(30%);
+	filter: grayscale(30%);
+}
+.secondimg {
+	width: 100%;
+	height: 12vw;
+	display: block;
+	object-fit: cover;
+	-webkit-filter: grayscale(30%);
+	filter: grayscale(30%);
+}
+#artbackimg {
+	background-attachment: fixed; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	max-height: 100vh;
+	min-height: 100vh;
+	opacity: 0.5;
+	filter: alpha(50);
+	object-fit: cover;
+	-webkit-filter: grayscale(50%);
+	filter: grayscale(50%);
+	
+}
+.imgtext {
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	position: absolute;
+	text-align: center;
+	/* font-size: 30px; */
+	font-weight: bold;
+	text-shadow: 0 0 15px black;
+	display: none;
+	pointer-events: none;
+}
+/* Koden nedan är endast styling för när man håller musen över de olika
+artiklarna/bilderna. */
+.mainimg:hover, .secondimg:hover {
+	opacity: 0.5;
+	filter: alpha(50);
+}
+.mainimg:hover + .imgtext {
+	display: block;
+}
+.secondimg:hover + .imgtext {
+	display: block;
+}
+.mainarticle .imgtext {
+	font-size: 2.2vw;
+}
+.secondarticle .imgtext {
+	font-size: 1.7vw;
+}
+
+/* Koden nedan gör så att sidan ändras när rutan blir mindre än 850px.
+Utan den här kommer det inte se rätt ut på mindre skärmar. */
+@media screen and (max-width: 850px){
+	#artcenter {
+		width: 80%;
+	}
+	.mainarticle {
+		width: 100%;
+		display: block;
+		margin: 1%;
+	}
+	.secondarticle {
+		width: 100%;
+		margin: 1%;
+	}
+	.mainimg {
+		height: 22vw;
+	}
+	.secondimg {
+		height: 22vw;
+	}
+	.imgtext {
+		font-size: 5vw !important;
+	}
+}
+
+
+/* Scrollbar som ändrar färg när man håller musen över den eller trycker*/
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+	background: #dde2e3; 
+}
+::-webkit-scrollbar-thumb {
+	background: #9d9c9a; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #72747a; 
+}
+
+a {
+	color: black;
+}

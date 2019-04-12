@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DW Watch Terms</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type"text/css" href="styledoc.css">
+	<link rel="icon" type="image/ico" href="bilder/Logo.png"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="container">
+	<div id="navbar">
+		<div id="logo">DW</div>
+		<div class="navbtn"><a href="index.html">Home</a></div>
+		<div class="navbtn"><a href="complications.html">Complications</a></div>
+		<div class="navbtn"><a href="movements.html">Movements </a></div>
+		<div class="navbtn"><a href="guide.html"> Buyers Guide</div></a>
+		
+			
+		<div id="dropmenu">
+			<div id="menuicon" onclick="toggleNavbar()">
+				<div class="iconbar"></div>
+				<div class="iconbar"></div>
+				<div class="iconbar"></div>
+			</div>
+			<div class="dropmenu-content">
+				<a href="index.html">Home</a>
+				<a href="complications.html">Complications</a>
+				<a href="movements.html">Movements</a>
+				<a href="guide.html">Buyers guide</a>
+				<a href="terms.html">Watch Terms</a>
+				<a href="brands.html">Brands</a>
+				<a href="about.html">About</a>
+			</div>
+		</div>
+		
+	</div>
+	<div id="content">
+		
+	</div>
+	
+	<div id="footer">
+		Copyright &copy; 2019. All Rights Reserved
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

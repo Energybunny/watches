@@ -1,0 +1,64 @@
+Buyers Guide
+<div class="ad">
+	<hr>
+	<a href="guide.html">
+		<img src="bilder/fconstant.jpg" class="adimg">
+	</a>
+	<div class="adtext"><b>Looking for a new watch?</b> Here are some tips to help on the way</div>
+</div>
+
+Complications
+<div class="ad">
+	<hr>
+	<a href="complications.html">
+		<img src="bilder/patekchrono.jpg" class="adimg">
+	</a>
+	<div class="adtext"><b>Guide</b> about different types of complications and what they're used for</div>			
+</div>
+
+Movements
+<div class="ad">
+	<hr>
+	<a href="movements.html">
+		<img src="bilder/paneraiverk.jpg" class="adimg">
+	</a>
+	<div class="adtext"><b>Guide</b> about the pros and cons of different types of movements </div>				
+</div>
+
+Brands
+<div class="ad">
+	<hr>
+	<a href="brands.html">
+		<img src="bilder/watchbrand.jpg" class="adimg">
+	</a>
+	<div class="adtext"><b>My recommendations</b> for some of the best brands on the market</div>
+</div>
+
+Watch terms
+<div class="ad">
+	<hr>
+	<a href="terms.html">
+		<img src="bilder/jlcchrono.jpg" class="adimg">
+	</a>
+	<div class="adtext"><b>List</b> with the different basic exterior components of a watch</div>
+</div>
+
+Sub 500
+<div class="ad">
+	<hr>
+	<a href="sub500.html">
+		<img src="bilder/tissotvisodate.jpeg" class="adimg">
+	</a>
+	<div class="adtext"><b>My recommendations</b> for some of the best watches under 500€</div>
+</div>
+
+Sub 1000
+<div class="ad">
+	<hr>
+	<a href="sub1000.html">
+		<img src="bilder/junghansmaxbill.jpg" class="adimg">
+	</a>
+	<div class="adtext"><b>My recommendations</b> for some of the best watches under 1000€</div>
+</div>
+
+

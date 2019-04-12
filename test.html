@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type"text/css" href="styledoc.css">
+	<link rel="icon" type="image/ico" href="Bilder/Logo.png"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<style>
+	
+</style>
+<body>
+
+	<img class="fade" name="slide" width="400" height="200" style="object-fit: cover;  ">
+
+	<button onclick="backChangeImg()" id="backbtn" style="width: 80px; height: 40px; border: solid 1px black;cursor: pointer;">
+	<p> hejdå </p>
+	</button>
+
+	<button onclick="fwdChangeImg()" id="fwdbtn" style="width: 80px; height: 40px; border: solid 1px black;cursor: pointer;" >
+	<p> hej </p>
+	</button>
+
+</body>
+<script>
+	var images = [];
+	var i = 0;
+	var time = 2000;
+	var timeout;
+
+	<!-- Image list -->
+	images[0] = "Bilder/gmt.jpg";
+	images[1] = "Bilder/IWC wallpaper.jpg";
+	images[2] = "Bilder/chronograph.jpg";
+	images[3] = "Bilder/datograph.jpg";
+
+	function changeImg (){
+		document.slide.src = images[i];
+		
+		if(i < images.length - 1){
+			i++;
+		}else {
+			i=0;
+		}
+		timeout = setTimeout("changeImg()", time);
+	}
+	window.onload = changeImg;
+
+	function backChangeImg (){
+		document.slide.src = images[i];
+		if(i > 0) {
+			i--;
+		}else {
+			i = (images.length - 1);
+		}
+		clearTimeout(timeout);
+		timeout = setTimeout("changeImg()", time);
+	}
+
+	function fwdChangeImg (){
+		document.slide.src = images[i];
+		if(i < images.length - 1){
+			i++;
+		}else{
+			i = 0;
+		}
+		clearTimeout(timeout);
+		timeout = setTimeout("changeImg()", time);
+	}
+</script>
+</html>
