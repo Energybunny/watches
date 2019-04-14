@@ -257,7 +257,9 @@ a:visited.ref {
 #adbox {
 	/* "lådan" som jag lägger mina ads i */
 	width: 25%;
-	
+	position: absolute;
+	display: inline-block;
+	right: 0;
 	margin-right: 8%;
 	margin-top: 2%;
 }
